@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { jarvis,Tictac,udemy,razorpay,chat, picfix, weather_app, mediaCenter} from "../../assets/index";
+import {  Tictac, udemy, chat, picfix, time_management_app, mediaCenter } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -23,10 +23,10 @@ const Projects = () => {
           link="https://picfix.ai"
         />
         <ProjectsCard
-          title="Weather App"
-          des="I built an application utilizing JavaScript, HTML, and CSS, allowing users to check live weather conditions either by inputting location names or utilizing device geolocation. this app provides instant access to accurate weather updates at the touch of a button."
-          src={weather_app}
-          link="https://hellofaiz.github.io/MCT-1/"
+          title="Time Management App"
+          des="TaskWise uses Firebase for secure user authentication and Google for quick sign-ins. On the backend,For Database operations with MongoDB.ś With TaskWise, you can prioritize tasks, set due dates, and keep track of everything you need to do."
+          src={time_management_app}
+          link="https://time-manegement-app.vercel.app"
         />
         <ProjectsCard
           title="Interactive Voice Response (IVR)"

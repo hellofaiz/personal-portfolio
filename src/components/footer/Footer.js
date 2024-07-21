@@ -1,12 +1,14 @@
 import React from 'react'
-import {FaBlogger, FaTwitter, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
-import {logo} from "../../assets/index"
+import { FaBlogger, FaTwitter, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
+import { logo } from "../../assets/index"
 
 const Footer = () => {
   return (
     <div className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-2 gap-8">
       <div className="w-full h-full flex flex-col gap-8">
-        <img className="w-32" src={logo} alt="logo" />
+        <div>
+          <h1 className='text-3xl font-bold' >:-/whoami</h1>
+        </div>
         <div className="flex gap-4">
           <a href="https://twitter.com/hello_faiz">
             <span className="bannerIcon">
@@ -37,7 +39,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-       <div className="w-full h-full">
+      <div className="w-full h-full">
         <h3 className="text-xl uppercase text-designColor tracking-wider">
           Quick Link
         </h3>
@@ -142,7 +144,7 @@ const Footer = () => {
           </li>
         </ul>
   </div>*/}
-    </div> 
+    </div>
   );
 }
 

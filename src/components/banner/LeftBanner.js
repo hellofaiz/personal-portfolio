@@ -3,13 +3,13 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Media from './Media';
 
 const LeftBanner = () => {
-    const [text] = useTypewriter({
-      words: ["MERN Stack Developer.","Front End Developer.", "Back End Developer."],
-      loop: true,
-      typeSpeed: 20,
-      deleteSpeed: 10,
-      delaySpeed: 2000,
-    });
+  const [text] = useTypewriter({
+    words: ["MERN Stack Developer.", "Front End Developer.", "Back End Developer."],
+    loop: true,
+    typeSpeed: 20,
+    deleteSpeed: 10,
+    delaySpeed: 2000,
+  });
   return (
     <div className="w-full lgl:w-1/2 flex flex-col gap-20">
       <div className="flex flex-col gap-5">
@@ -26,14 +26,14 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-        I'm a passionate MERN Stack Developer with 0-1 years of experience, specializing in backend development. 
-        My standout achievement is mastering the MERN stack in just four months. 
-        I'm known for my honesty, teamwork, and consistent on-time delivery. 
-        My skill set includes Node.js, MongoDB, Express.js, React.js, Next.js, HTML, and JavaScript.
+          I'm a passionate MERN Stack Developer with nearly 2 years of experience.
+          My standout achievement is mastering the MERN stack in just four months.
+          I'm known for my honesty, teamwork, and consistent on-time delivery.
+          My skill set includes Node.js, MongoDB, Express.js, React.js, Next.js, HTML, and JavaScript.
         </p>
       </div>
-     {/* Media */}
-     <Media />
+      {/* Media */}
+      <Media />
     </div>
   );
 }

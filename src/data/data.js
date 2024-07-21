@@ -25,13 +25,13 @@ export const featuresData = [
   {
     id: 6,
     icon: <FaMobile />,
-    title: "Unit Testing",
-    des: "Learning Unit Testing to ensure smooth running of my website",
+    title: "Mobile App Development",
+    des: "Learning Mobile App Development using React Native.",
   },
   {
     id: 4,
     icon: <FaGlobe />,
     title: "Javascript",
-    des: "Dom Manipulation , Browser Apis,Chrome Extensions,ES6,Functional Programming",
+    des: "Dom Manipulation, Rest APIs, Browser Apis,Chrome Extensions,ES6,Functional Programming",
   },
 ];

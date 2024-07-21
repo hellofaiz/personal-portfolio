@@ -14,6 +14,7 @@ import quote from "./images/testmonial/quote.png";
 import contactImg from "./images/contact/contactImg.png";
 import jarvis from "./images/projects/Jarvis.png"
 import weather_app from "./images/projects/weather_app.png"
+import time_management_app from "./images/projects/time management app.png"
 import mediaCenter from "./images/projects/media center.png"
 import Tictac from "./images/projects/TicTac.png"
 import udemy from "./images/projects/Udemy.png"
@@ -43,5 +44,6 @@ export {
   portfolioImg,
   picfix,
   weather_app,
-  mediaCenter
+  mediaCenter,
+  time_management_app
 };
