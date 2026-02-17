@@ -8,21 +8,45 @@ import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Resume from "./components/resume/Resume";
 import Testimonial from "./components/tesimonial/Testimonial";
+import Splash from "./components/splash/Splash";
+// import CodeTerminal from "./components/codeTerminal/CodeTerminal";
+import { AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="w-full h-auto bg-bodyColor text-lightText px-4">
-        <Navbar />
-      <div className="max-w-screen-xl mx-auto">
-        <Banner />
-        <Features />
-        <Projects />
-        <Resume />
-        {/* <Testimonial /> */}
-        <Contact />
-        <Footer />
-        <FooterBottom />
-      </div>
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <Splash key="splash" />
+        ) : (
+          <>
+            <Navbar />
+            <div className="max-w-screen-xl mx-auto">
+              <Banner />
+              <Features />
+              <Projects />
+              {/* <CodeTerminal /> */}
+              <Resume />
+              {/* <Testimonial /> */}
+              <Contact />
+              <Footer />
+              <FooterBottom />
+            </div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -15,6 +15,11 @@ export const navLinksdata = [
     link: "projects",
   },
   {
+    _id: 1005,
+    title: "Code",
+    link: "code-terminal",
+  },
+  {
     _id: 1004,
     title: "Resume",
     link: "resume",

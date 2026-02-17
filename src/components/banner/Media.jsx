@@ -18,9 +18,9 @@ import {
 } from "react-icons/si";
 const Media = () => {
   return (
-    <div className="flex flex-col xl:flex-col gap-6 lgl:gap-6 justify-between">
+    <div className="flex flex-col xl:flex-col gap-2 lgl:gap-2 justify-between">
       <div>
-        <h2 className="text-base uppercase font-titleFont mb-4">
+        <h2 className="text-base uppercase font-titleFont mb-2">
           BEST SKILL ON
         </h2>
         <div className="flex gap-4">
@@ -61,7 +61,7 @@ const Media = () => {
           {/* </a> */}
         </div>
       </div>
-      <div>
+      {/* <div>
         <h2 className="text-base uppercase font-titleFont mb-4">Find me in</h2>
         <div className="flex gap-4">
           <a href="https://twitter.com/hello_faiz">
@@ -92,7 +92,7 @@ const Media = () => {
             </span>
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

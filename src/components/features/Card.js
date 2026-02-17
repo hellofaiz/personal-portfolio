@@ -1,36 +1,64 @@
 import React from 'react'
-import { HiArrowRight } from "react-icons/hi";
+import { motion } from 'framer-motion';
 
-const Card = ({item:{title,des,icon}}) => {
+const Card = ({ item: { title, des, icon } }) => {
   return (
-    <div className="w-full px-12 h-80 py-10 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
-      <div className="h-72 overflow-y-hidden">
-        <div className="flex h-full flex-col gap-10 translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-          <div className="w-10 h-8 flex flex-col justify-between">
-        
-            {icon ? (
-              <span className="text-5xl text-designColor">{icon}</span>
-            ) : (
-              <>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-              </>
-            )}
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2 className="text-xl md:text-2xl font-titleFont font-bold text-gray-300">
-              {title}
-            </h2>
-            <p className="base">{des}</p>
-            <span className="text-2xl text-designColor">
-              <HiArrowRight />
-            </span>
-          </div>
-        </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.02, y: -5 }}
+      className="group relative w-full p-8 rounded-2xl bg-gradient-card backdrop-blur-xl border border-designColor/20 hover:border-designColor/50 shadow-shadowOne hover:shadow-shadowTwo transition-all duration-500 overflow-hidden"
+    >
+      {/* Background Gradient on Hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-designColor/5 to-accentColor/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Shine Effect */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        animate={{
+          x: ['-100%', '200%'],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          repeatDelay: 5,
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Icon */}
+        <motion.div
+          className="mb-6 text-6xl text-designColor group-hover:text-accentColor transition-colors duration-300"
+          whileHover={{ rotate: 360, scale: 1.1 }}
+          transition={{ duration: 0.6 }}
+        >
+          {icon}
+        </motion.div>
+
+        {/* Title */}
+        <h2 className="text-xl md:text-2xl font-titleFont font-bold text-white mb-4 group-hover:text-designColor transition-colors duration-300">
+          {title}
+        </h2>
+
+        {/* Description */}
+        <p className="text-sm md:text-base text-lightText/80 group-hover:text-lightText/90 leading-relaxed transition-colors duration-300">
+          {des}
+        </p>
+
+        {/* Bottom Accent Line */}
+        <motion.div
+          className="mt-6 h-1 bg-gradient-primary rounded-full"
+          initial={{ width: 0 }}
+          whileInView={{ width: '40%' }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        />
       </div>
-    </div>
+
+      {/* Corner Decoration */}
+      <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-designColor/10 to-accentColor/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </motion.div>
   );
 }
 
