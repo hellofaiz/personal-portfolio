@@ -1,6 +1,5 @@
 import { FaPalette } from "react-icons/fa";
 import { SiReact, SiNodedotjs } from "react-icons/si";
-import { BsCodeSlash } from "react-icons/bs";
 import { MdSpeed, MdCloudDone } from "react-icons/md";
 
 // Features Data
