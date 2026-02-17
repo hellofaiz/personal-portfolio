@@ -1,14 +1,9 @@
 import React from "react";
 import {
-  FaInstagram,
-  FaLinkedinIn,
   FaReact,
-  FaGithub,
-  FaTwitter,
 } from "react-icons/fa";
 import {
   SiJavascript,
-  SiTailwindcss,
   SiNodedotjs,
   SiHtml5,
   SiNextdotjs,

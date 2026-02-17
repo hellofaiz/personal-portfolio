@@ -1,8 +1,6 @@
-import { AiFillAppstore } from "react-icons/ai";
-import { FaMobile, FaGlobe, FaRocket, FaServer, FaCode, FaPalette } from "react-icons/fa";
-import { SiProgress, SiAntdesign, SiStackoverflow, SiMongodb, SiReact, SiNodedotjs } from "react-icons/si";
-import { BsCodeSlash, BsLightningChargeFill } from "react-icons/bs";
-import { HiOutlineDatabase } from "react-icons/hi";
+import { FaPalette } from "react-icons/fa";
+import { SiReact, SiNodedotjs } from "react-icons/si";
+import { BsCodeSlash } from "react-icons/bs";
 import { MdSpeed, MdCloudDone } from "react-icons/md";
 
 // Features Data

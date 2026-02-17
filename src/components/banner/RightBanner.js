@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTerminal, FaCheckCircle, FaSpinner } from 'react-icons/fa';
 import { SiGit, SiNpm, SiVercel } from 'react-icons/si';
-import { calculateExperience, getTotalMonths } from '../../utils/experience';
+import { getTotalMonths } from '../../utils/experience';
 
 const RightBanner = () => {
   const [logs, setLogs] = useState([]);
-  const [isActive, setIsActive] = useState(true);
   const totalMonths = getTotalMonths('2022-11-01');
 
   const terminalCommands = [
@@ -83,6 +82,7 @@ const RightBanner = () => {
       clearTimeout(initialTimer);
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const stats = [
@@ -116,14 +116,12 @@ const RightBanner = () => {
               </div>
             </div>
             <div className="flex items-center gap-1.5 sm:gap-2">
-              {isActive && (
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-                >
-                  <FaSpinner className="text-designColor text-xs sm:text-sm" />
-                </motion.div>
-              )}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+              >
+                <FaSpinner className="text-designColor text-xs sm:text-sm" />
+              </motion.div>
               <span className="text-[10px] sm:text-xs text-lightText/60 font-mono uppercase">Active</span>
             </div>
           </div>

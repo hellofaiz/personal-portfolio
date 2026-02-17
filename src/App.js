@@ -7,7 +7,6 @@ import FooterBottom from "./components/footer/FooterBottom";
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Resume from "./components/resume/Resume";
-import Testimonial from "./components/tesimonial/Testimonial";
 import Splash from "./components/splash/Splash";
 // import CodeTerminal from "./components/codeTerminal/CodeTerminal";
 import { AnimatePresence } from 'framer-motion';
