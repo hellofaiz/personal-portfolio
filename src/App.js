@@ -9,7 +9,7 @@ import Projects from "./components/projects/Projects";
 import Resume from "./components/resume/Resume";
 import Splash from "./components/splash/Splash";
 // import CodeTerminal from "./components/codeTerminal/CodeTerminal";
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -26,11 +26,16 @@ function App() {
 
   return (
     <div className="w-full h-auto bg-bodyColor text-lightText px-4">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {loading ? (
           <Splash key="splash" />
         ) : (
-          <>
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Navbar />
             <div className="max-w-screen-xl mx-auto">
               <Banner />
@@ -43,7 +48,7 @@ function App() {
               <Footer />
               <FooterBottom />
             </div>
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

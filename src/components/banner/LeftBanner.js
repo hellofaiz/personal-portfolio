@@ -54,17 +54,17 @@ const LeftBanner = () => {
           </p>
 
           {/* Resume Download Buttons */}
-          <div className="flex gap-4 mt-4 flex-wrap">
+          <div className="flex gap-2 sm:gap-4 mt-4">
             <button
               onClick={handleDownload}
-              className="px-6 py-3 bg-gradient-primary rounded-xl text-white font-semibold flex items-center gap-2 hover:shadow-glowPurple hover:scale-105 transition-all duration-300 group"
+              className="px-4 sm:px-6 py-3 bg-gradient-primary rounded-xl text-white text-xs sm:text-base font-semibold flex items-center gap-2 hover:shadow-glowPurple hover:scale-105 transition-all duration-300 group whitespace-nowrap"
             >
               <FaDownload className="group-hover:animate-bounce" />
               Download Resume
             </button>
             <button
               onClick={() => setShowPreview(true)}
-              className="px-6 py-3 bg-cardBg border-2 border-designColor/30 rounded-xl text-lightText font-semibold flex items-center gap-2 hover:bg-cardHover hover:border-designColor hover:shadow-glowPurple hover:scale-105 transition-all duration-300"
+              className="px-4 sm:px-6 py-3 bg-cardBg border-2 border-designColor/30 rounded-xl text-lightText text-xs sm:text-base font-semibold flex items-center gap-2 hover:bg-cardHover hover:border-designColor hover:shadow-glowPurple hover:scale-105 transition-all duration-300 whitespace-nowrap"
             >
               <FaEye />
               Preview

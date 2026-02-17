@@ -11,16 +11,18 @@ const ProjectsCard = ({ title, des, src, link }) => {
             src={src}
             alt={title}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-bodyColor/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 bg-gradient-primary rounded-lg text-white font-medium flex items-center gap-2 hover:shadow-glowPurple transition-all"
-            >
-              View Project <FaExternalLinkAlt className="text-sm" />
-            </a>
-          </div>
+          {link && (
+            <div className="absolute inset-0 bg-gradient-to-t from-bodyColor/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-gradient-primary rounded-lg text-white font-medium flex items-center gap-2 hover:shadow-glowPurple transition-all"
+              >
+                View Project <FaExternalLinkAlt className="text-sm" />
+              </a>
+            </div>
+          )}
         </div>
         <div className="w-full mt-5 flex flex-col gap-6">
           <div>
@@ -28,16 +30,18 @@ const ProjectsCard = ({ title, des, src, link }) => {
               <h3 className="text-base uppercase text-designColor font-semibold tracking-wider">
                 {title}
               </h3>
-              <div className="flex gap-2">
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg w-10 h-10 rounded-full bg-cardBg border border-designColor/20 inline-flex justify-center items-center text-lightText hover:text-white hover:bg-gradient-primary hover:shadow-glowPurple transition-all duration-300 cursor-pointer"
-                >
-                  <FaGlobe />
-                </a>
-              </div>
+              {link && (
+                <div className="flex gap-2">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg w-10 h-10 rounded-full bg-cardBg border border-designColor/20 inline-flex justify-center items-center text-lightText hover:text-white hover:bg-gradient-primary hover:shadow-glowPurple transition-all duration-300 cursor-pointer"
+                  >
+                    <FaGlobe />
+                  </a>
+                </div>
+              )}
             </div>
             <p className="text-sm tracking-wide mt-3 text-lightText/80 group-hover:text-lightText/100 duration-300 leading-6">
               {des}

@@ -13,7 +13,7 @@ const Splash = () => {
           initial={{ scale: 0.8, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ duration: 0.6, type: 'spring' }}
-          className="bg-gradient-card backdrop-blur-xl rounded-2xl p-8 shadow-shadowTwo border border-designColor/30 w-[400px]"
+          className="bg-gradient-card backdrop-blur-xl rounded-3xl p-6 sm:p-10 shadow-shadowTwo border border-designColor/30 w-[85vw] max-w-[340px] sm:max-w-[450px] md:max-w-[500px] h-auto flex flex-col items-center justify-center text-center"
         >
           {/* Window Controls */}
           <div className="flex gap-2 mb-6">
@@ -46,7 +46,7 @@ const Splash = () => {
             </motion.div>
 
             {/* Progress Bar */}
-            <div className="mt-4 h-2 bg-cardBg rounded-full overflow-hidden relative">
+            <div className="mt-4 h-2 bg-cardBg rounded-full overflow-hidden relative w-full max-w-[280px] mx-auto">
               <motion.div
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
