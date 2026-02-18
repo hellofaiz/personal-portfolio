@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { jarvis, chat, picfix, mediaCenter, udemy, razorpay } from "../../assets/index";
+import { chat, picfix, mediaCenter, udemy, razorpay } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -36,11 +36,7 @@ const Projects = () => {
           des="High-performance e-commerce solution with integrated payment gateway (Razorpay). Features dynamic product filtering, seamless checkout flow, and optimized inventory management. Implemented advanced caching strategies and lazy loading for high-resolution assets, ensuring a fast and responsive shopping experience."
           src={razorpay}
         />
-        {/* <ProjectsCard
-          title="JARVIS - AI Desktop Assistant"
-          des="Advanced AI-powered desktop assistant built with Python and React. Integrates speech recognition, NLP, and machine learning to automate system tasks, manage schedules, and provide real-time information. Features a sleek, futuristic UI with smooth animations and low-latency response times."
-          src={jarvis}
-        /> */}
+
         <ProjectsCard
           title="Real-Time Chat Application"
           des="Built a real-time chat application with React and Firebase featuring Google authentication, real-time message storage with Firestore, and dynamic UI updates. Implemented with Chakra UI for a modern, sleek interface. Features instant messaging, user presence indicators, and logout functionality."
